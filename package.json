@@ -1,0 +1,30 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./server/index.js",
+    "backend": "nodemon ./server/index.js",
+    "frontend": "npm run front --prefix",
+    "dev": "concurrently \" npm run backend \" \" npm  start --prefix portfolio\" "
+  },
+  "keywords": [
+    "contact",
+    "hire",
+    "a",
+    "software",
+    "developer"
+  ],
+  "author": "Peter",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^6.0.2",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "joi": "^17.4.0",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.12.5",
+    "nodemailer": "^6.5.0"
+  }
+}
