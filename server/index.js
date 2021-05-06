@@ -7,6 +7,14 @@ const ApiError = require('./utils/ApiError')
 const cors = require('cors')
 const nodemailer = require('nodemailer') 
 require("dotenv").config();
+const path = require('path')
+const dotenv = require('dotenv')
+
+dotenv.config()
+
+// const config = require('./configs')
+
+
 
 
 
@@ -14,18 +22,21 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(cors())
 
-
+app.use(express.static(path.join(__dirname, "views/build")))
+app.get('/', (req, res)=>{
+  res.sendFile(path.join(__dirname, "view", 'index.html'))
+})
 /**Contact message */
 app.use('/contact', contactRoute )
 
 
 const transporter = nodemailer.createTransport({
-    host: "smtp.gmail.com", //replace with your email provider
+    host: process.env.SMTP, //replace with your email provider
     port: 587,
     secure:false,
     auth: {
-      user: 'peteraydev@gmail.com',
-      pass:  '08037264137'
+      user: process.env.EMAIL,
+      pass:  process.env.PASS
     },
     tls: {
         rejectUnauthorized:false
@@ -43,6 +54,8 @@ transporter.verify(function(error, success) {
   
   app.post('/send', (req, res, next) => {
     console.log(req.body);
+    console.log(process.env.EMAIL)
+    
    
   
 let mail = {
@@ -53,7 +66,7 @@ let mail = {
       Email: ${req.body.email} 
       Message: ${req.body.message}`
     }
-  
+
     transporter.sendMail(mail, (err, data) => {
       if (err) {
         res.json({
@@ -81,8 +94,22 @@ app.all('*' , (err, req, res, next)=>{
     next(new ApiError('oppppss, page not found', 404))
 })
 
-PORT = 5000
+//--------------------------------------------//
 
+// const configs = {
+//   development: {
+//     SERVER_URI: 'localhost:5000',
+//   },
+//   production: {
+//     SERVER_URI: 'HEROKU_URI',
+//   },
+// };
+
+// module.exports.config = configs[process.env.NODE_ENV]
+
+//------------------------------------------//
+
+const PORT = process.env.PORT || 5000
 
 moongose.connect('mongodb://127.0.0.1:27017/contacts', {
     useNewUrlParser: true,

@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/static/css/main.5b6fa6d7.chunk.css",
+    "main.js": "/static/js/main.bfc586b6.chunk.js",
+    "main.js.map": "/static/js/main.bfc586b6.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.06b5035f.js",
+    "runtime-main.js.map": "/static/js/runtime-main.06b5035f.js.map",
+    "static/css/2.d46c0ebb.chunk.css": "/static/css/2.d46c0ebb.chunk.css",
+    "static/js/2.02dac48e.chunk.js": "/static/js/2.02dac48e.chunk.js",
+    "static/js/2.02dac48e.chunk.js.map": "/static/js/2.02dac48e.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.d46c0ebb.chunk.css.map": "/static/css/2.d46c0ebb.chunk.css.map",
+    "static/css/main.5b6fa6d7.chunk.css.map": "/static/css/main.5b6fa6d7.chunk.css.map",
+    "static/js/2.02dac48e.chunk.js.LICENSE.txt": "/static/js/2.02dac48e.chunk.js.LICENSE.txt",
+    "static/media/Bread.1e065d8d.png": "/static/media/Bread.1e065d8d.png",
+    "static/media/Quiz_App.35a8d717.png": "/static/media/Quiz_App.35a8d717.png",
+    "static/media/boutikAng.301826dc.png": "/static/media/boutikAng.301826dc.png",
+    "static/media/App.css": "/static/media/laptop.5efdadb7.jpg",
+    "static/media/inspiredRX.e3e5f39d.png": "/static/media/inspiredRX.e3e5f39d.png",
+    "static/media/interior_land.1ce0789c.png": "/static/media/interior_land.1ce0789c.png",
+    "static/media/investment_land.377fca78.png": "/static/media/investment_land.377fca78.png",
+    "static/media/learncodelanding.fba9d013.png": "/static/media/learncodelanding.fba9d013.png",
+    "static/media/logistics.c31436f7.png": "/static/media/logistics.c31436f7.png",
+    "static/media/omini.8ee07668.png": "/static/media/omini.8ee07668.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.06b5035f.js",
+    "static/css/2.d46c0ebb.chunk.css",
+    "static/js/2.02dac48e.chunk.js",
+    "static/css/main.5b6fa6d7.chunk.css",
+    "static/js/main.bfc586b6.chunk.js"
+  ]
+}
